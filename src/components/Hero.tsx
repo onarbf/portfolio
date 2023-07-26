@@ -5,8 +5,8 @@ export const Hero = () => {
 
         <div>
 
-          <h1 className='text-[2rem] lg:text-[2.4rem] font-[600] tracking-tight leading-[2.1rem]'>Onar Berrade</h1>
-          <h2 className='text-[1rem] pt-2'>Javascript developer <br />specialised in React/Node</h2>
+          <h1 className='text-4xl lg:text-5xl text-slate-200 font-[600] tracking-tight leading-[2.1rem]'>Onar Berrade</h1>
+          <h2 className='text-lg pt-2 text-slate-200'>Javascript developer <br />specialised in React/Node</h2>
           <h3 className='text-[0.8rem] pt-3 font-[400] text-[#94a3b8]'>I love to make websites and platforms work.</h3>
         </div>
       </header>
