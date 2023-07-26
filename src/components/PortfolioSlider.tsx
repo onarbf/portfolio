@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { PhoneModel } from './PhoneModel'
 
 export const PortfolioSlider = () => {
-  const [websiteURL, setWebsiteURL] = useState('https://www.mayeutica.io')
+  const [websiteURL] = useState('https://www.mayeutica.io')
   return (
     <section className='grid  grid-cols-1 lg:grid-cols-8 mt-20 gap-4'>
       <div className=' col-span-1 lg:col-span-3 flex flex-col justify-between order-last lg:order-first py-0 lg:py-10'>
