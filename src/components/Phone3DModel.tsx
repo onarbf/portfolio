@@ -44,7 +44,7 @@ export const Phone3DModel = forwardRef((props: any, ref: any) => {
             geometry={nodes.Body_Wallpaper_0.geometry}
             material={materials.Wallpaper}
           >
-            <Html rotation-y={Math.PI} position={[0, 0, -0.02]} transform scale={[0.05, 0.051, 0.05]}>
+            <Html rotation-y={Math.PI} position={[0, -0.04, -0.02]} transform scale={[0.05, 0.051, 0.05]}>
               <iframe
                 title='Web en el iPhone'
                 src={props.websiteUrl} // Reemplaza esta URL con la URL de la web que quieras mostrar
