@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { PhoneModel } from './PhoneModel'
+import MacModel from './Mac3D/MacModel'
 
 export const PortfolioSlider = () => {
   const [websiteURL] = useState('https://www.mayeutica.io')
@@ -32,7 +33,7 @@ export const PortfolioSlider = () => {
         </div>
       </div>
       <div className='col-span-1 lg:col-span-5  h-[300px] lg:h-[600px]'>
-        <PhoneModel websiteURL={websiteURL} />
+        <MacModel websiteURL={websiteURL} />
       </div>
     </section>
   )
