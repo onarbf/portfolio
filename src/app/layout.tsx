@@ -1,4 +1,3 @@
-import { MouseFollower } from '@/components/MouseFollower'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -20,7 +19,6 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='en'>
-      <MouseFollower />
       <body className={inter.className + ' bg-slate-900'}>{children}</body>
     </html>
   )

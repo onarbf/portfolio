@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 export const MouseFollower = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   useEffect(() => {
-    const updateMousePosition = (event) => {
+    const updateMousePosition = (event: MouseEvent) => {
       setMousePos({ x: event.clientX, y: event.clientY })
     }
     window.addEventListener('mousemove', updateMousePosition)

@@ -8,8 +8,8 @@ export const Hero = () => {
         <div>
 
           <h1 className='text-4xl sm:text-5xl text-slate-200 font-[600] tracking-tight leading-4'>Onar Berrade</h1>
-          <h2 className='text-lg pt-2 text-slate-200 lg:leading-[1.4rem] pt-5 lg:pt-1'>Javascript developer <br />specialised in React/Node</h2>
-          <h3 className=' pt-3 font-[400] pt-3'>I love to make websites and platforms work.</h3>
+          <h2 className='text-lg  text-slate-200 lg:leading-[1.4rem] pt-5 lg:pt-1'>Javascript developer <br />specialised in React/Node</h2>
+          <h3 className=' font-[400] pt-3'>I love to make websites and platforms work.</h3>
         </div>
         <div>
           <ul className='flex gap-2 mt-5'>
