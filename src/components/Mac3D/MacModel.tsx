@@ -3,10 +3,11 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls } from '@react-three/drei'
 
-function Model (props) {
-  const group = useRef(null!)
+function Model (props: any) {
+  const group = useRef<THREE.Group>(null!)
   // Load model
-  const { nodes, materials } = useGLTF('/mac-draco.glb')
+
+  const { nodes, materials } = useGLTF('/mac-draco.glb') as any
   // Make it float
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
@@ -55,7 +56,7 @@ function Model (props) {
   )
 }
 
-export default function MacModel (props) {
+export default function MacModel (props: any) {
   return (
     <Canvas camera={{ position: [-5, 0, -15], fov: 50 }}>
       <pointLight position={[10, 10, 10]} intensity={1.5} />

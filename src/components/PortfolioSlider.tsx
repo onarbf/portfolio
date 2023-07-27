@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { PhoneModel } from '../../deprecated/PhoneModel'
 import MacModel from './Mac3D/MacModel'
 
 export const PortfolioSlider = () => {

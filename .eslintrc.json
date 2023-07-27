@@ -1,8 +1,6 @@
 {
   "extends": ["./node_modules/standard/eslintrc.json","next/core-web-vitals"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "react/react-in-jsx-scope": "off",
     "no-undef": "off"
   }
 }
