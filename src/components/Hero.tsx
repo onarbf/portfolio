@@ -2,7 +2,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare } from 'react-icons/a
 
 export const Hero = () => {
   return (
-    <section className='flex flex-col md:flex-row mt-[56px] lg:mt-[72px]'>
+    <section className='flex flex-col md:flex-row pt-[56px] lg:pt-[72px]  w-auto md:w-[1112px]  mx-6 md:mx-auto'>
       <header className='min-w-auto md:min-w-[524px]'>
 
         <div>

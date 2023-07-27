@@ -5,16 +5,10 @@ import { PortfolioSlider } from '@/components/PortfolioSlider'
 
 export default function App () {
   return (
-    <main>
+    <main className='antialiased text-slate-400'>
       <MouseFollower />
-      <section
-        className='text-slate-400 w-auto md:w-[1112px]  gap-12 mx-6 md:mx-auto'
-      >
-        <div className='relative z-10'>
-          <Hero />
-          <PortfolioSlider />
-        </div>
-      </section>
+      <Hero />
+      <PortfolioSlider />
     </main>
   )
 }
