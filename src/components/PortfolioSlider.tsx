@@ -25,8 +25,8 @@ export const PortfolioSlider = () => {
   }
 
   return (
-    <section className='relative md:h-[600px]  my-[48px] w-auto md:w-[1112px]  mx-6 md:mx-auto'>
-      <div className='relative z-0 h-full'>
+    <section className='relative h-[600px] md:h-[600px] my-[48px] w-auto md:w-[1112px]  mx-6 md:mx-auto'>
+      <div className='relative z-0 h-full '>
         <MacModel websiteUrl={slides[slide].websiteUrl} />
       </div>
       <div className='absolute pointer-events-none bottom-0 left-0 z-50 w-full h-full flex items-end '>
