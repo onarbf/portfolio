@@ -7,25 +7,6 @@ import { Loading } from '../Loading'
 function Model (props: any) {
   const group = useRef<THREE.Group>(null!)
   const iframeRef = useRef(null!)
-  const [modelPosition, setModelPosition] = useState([4, -5, 0])
-
-  useEffect(() => {
-    const updatePosition = () => {
-      if (window.innerWidth < 700) {
-        console.log('tamaño cambiado a peque')
-        setModelPosition([0, 0, 0]) // Asigna los nuevos valores para la posición
-      } else {
-        console.log('tamaño cambiado a grande')
-        setModelPosition([4, -5, 0]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
-      }
-    }
-
-    // Ejecuta la función al montar el componente y cuando cambia el tamaño de la pantalla
-    updatePosition()
-    window.addEventListener('resize', updatePosition)
-
-    return () => window.removeEventListener('resize', updatePosition)
-  }, [])
 
   const { nodes, materials } = useGLTF('/mac-draco.glb') as any
   // Make it float
@@ -38,7 +19,7 @@ function Model (props: any) {
   })
   return (
     // position={[4, -5, 0]} desktop
-    <group ref={group} {...props} dispose={null} position={modelPosition}>
+    <group ref={group} {...props} dispose={null}>
       <group rotation-x={-0.425} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh material={materials.aluminium} geometry={nodes.Cube008.geometry} />
@@ -81,11 +62,34 @@ function Model (props: any) {
 }
 
 export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoading }: any) {
+  const group = useRef<THREE.Group>(null!)
+  const [modelPosition, setModelPosition] = useState([-2, 0, 5]) as any
+  const [modelFOV, setModelFOV] = useState(35)
+  useEffect(() => {
+    const updatePosition = () => {
+      if (window.innerWidth < 700) {
+        console.log('tamaño cambiado a peque')
+        setModelPosition([0, 1.75, 0]) // Asigna los nuevos valores para la posición
+        setModelFOV(50)
+      } else {
+        console.log('tamaño cambiado a grande')
+        setModelPosition([-2, 0, 5]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
+        setModelFOV(35)
+      }
+    }
+
+    // Ejecuta la función al montar el componente y cuando cambia el tamaño de la pantalla
+    updatePosition()
+    window.addEventListener('resize', updatePosition)
+
+    return () => window.removeEventListener('resize', updatePosition)
+  }, [])
+
   return (
-    <Canvas camera={{ position: [-5, 0, -15], fov: 50 }}>
+    <Canvas camera={{ position: [-5, 0, -15], fov: modelFOV }}>
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <Suspense fallback={null}>
-        <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
+        <group ref={group} rotation={[0, Math.PI, 0]} position={modelPosition}>
           <Model websiteUrl={websiteUrl} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
         </group>
         <Environment preset='city' />

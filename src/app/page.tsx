@@ -1,4 +1,5 @@
 'use client'
+import { List } from '@/components/List'
 import { Hero } from '@/components/Hero'
 
 import { MouseFollower } from '@/components/MouseFollower'
@@ -10,6 +11,7 @@ export default function App () {
       <MouseFollower />
       <Hero />
       <PortfolioSlider />
+      <List />
     </main>
   )
 }
