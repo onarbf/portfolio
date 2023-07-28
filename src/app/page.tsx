@@ -1,5 +1,6 @@
 'use client'
 import { Hero } from '@/components/Hero'
+
 import { MouseFollower } from '@/components/MouseFollower'
 import { PortfolioSlider } from '@/components/PortfolioSlider'
 
