@@ -3,7 +3,11 @@ const PROJECTS = [
     id: 0,
     websiteTitle: 'Mayeutica.io',
     position: 'Frontend / Backend',
-    description: 'Lorem ipsum dolor sit amet \n Lorem ipsum dolor sit amet',
+    description: (<>
+      En el mundo de las fake news, todos hablan de que la IA empeorará mucho la situación.
+      Con este proyecto, quise demostrar que es al contrario. <br /><br />
+      Se trata de un periódico digital donde cada día, de forma automática, una serie de IA's genera noticias basándose en las noticias más relevantes de ese tema. Es un periódico absolutamente autónomo, donde él mismo busca los temas interesantes, genera las noticias, las imágenes y las publica. Es el proyecto del que más orgulloso estoy (hasta la fecha)
+    </>),
     technologies: ['nextJS', 'JavaScript', 'React', 'NodeJS'],
     websiteUrl: 'https://www.mayeutica.io'
   },
