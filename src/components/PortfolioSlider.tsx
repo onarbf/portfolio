@@ -29,7 +29,7 @@ export const PortfolioSlider = () => {
   }
 
   return (
-    <section className='relative h-[700px] md:h-[600px] my-[48px] w-auto md:w-[1112px] md:mx-auto'>
+    <section id='projects' className='relative h-[700px] md:h-[600px] my-[48px] w-auto md:w-[1112px] md:mx-auto'>
       <div className='relative z-0 h-full '>
         <MacModel websiteUrl={slides[slide].websiteUrl} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
       </div>

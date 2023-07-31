@@ -12,5 +12,7 @@ export interface Job{
     position: string
     description: React.JSX
     year: string
+    period: string
+    highlights: string[]
     technologies: string[]
 }

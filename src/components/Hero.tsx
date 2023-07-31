@@ -1,4 +1,5 @@
-import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare } from 'react-icons/ai'
+import { Header } from './Header'
+import { SocialMediaLinks } from './SocialMediaLinks'
 
 export const Hero = () => {
   const bioData = {
@@ -23,7 +24,7 @@ export const Hero = () => {
       </>)
   }
   return (
-    <section className='flex flex-col md:flex-row pt-[56px] lg:pt-[72px]  w-auto md:w-[1112px]  mx-6 md:mx-auto'>
+    <section id='about' className='flex flex-col md:flex-row pt-[56px] lg:pt-[72px]  w-auto md:w-[1112px]  mx-6 md:mx-auto'>
       <header className='min-w-auto md:min-w-[524px]'>
 
         <div>
@@ -32,12 +33,12 @@ export const Hero = () => {
           <h2 className='text-lg  text-slate-200 lg:leading-[0.8rem] pt-5 lg:pt-3'>{bioData.position}</h2>
           <h3 className=' font-[400] pt-3'>{bioData.tagline}</h3>
         </div>
-        <div>
-          <ul className='flex gap-2 mt-5'>
-            <li className='transition hover:text-white'><AiFillGithub size={32} /></li>
-            <li className='transition hover:text-white'><AiFillLinkedin size={32} /></li>
-            <li className='transition hover:text-white'><AiFillTwitterSquare size={32} /></li>
-          </ul>
+        <div className='mt-5'>
+          <SocialMediaLinks />
+        </div>
+
+        <div className='hidden md:block pt-4'>
+          <Header />
         </div>
       </header>
       <div className=' grow  text-[#94a3b8]   px-0  lg:px-4 lg:mt-0 mt-[200px]'>

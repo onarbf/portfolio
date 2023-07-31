@@ -1,11 +1,13 @@
 import { type Project } from '@/types/types'
 import { motion } from 'framer-motion'
-
+import { useState } from 'react'
+import { VscArrowSmallDown } from 'react-icons/vsc'
 interface Props{
     slide: Project
 }
 
 export const PortfolioSliderCard = ({ slide }: Props) => {
+  const [isHover, setIsHover] = useState(false)
   const { websiteTitle, position, description, technologies } = slide
   return (
     <motion.div
@@ -33,6 +35,19 @@ export const PortfolioSliderCard = ({ slide }: Props) => {
         <h2 className='text-base font-[400] text-slate-200 md:text-slate-400'>{position}</h2>
         <div className='grow  text-slate-300 font-[400] text-[0.80rem]'>
           {description}
+        </div>
+        <div>
+          <a href={slide.websiteUrl} target='_blank'>
+            <button
+              className='text-sm text-white rounded mt-2 flex py-2'
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
+            >
+              <span>Ver proyecto</span>
+              <div className={`${isHover ? 'bottom-1 left-1' : 'bottom-0 left-0'} relative transition-all rotate-[-135deg]`}>
+                <VscArrowSmallDown size={20} />
+              </div>
+            </button></a>
         </div>
       </div>
       <ul className='flex flex-wrap gap-2 pt-3'>

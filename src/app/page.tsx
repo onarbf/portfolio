@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero'
 
 import { MouseFollower } from '@/components/MouseFollower'
 import { PortfolioSlider } from '@/components/PortfolioSlider'
+import { Footer } from '@/components/Footer'
 
 export default function App () {
   return (
@@ -12,6 +13,7 @@ export default function App () {
       <Hero />
       <PortfolioSlider />
       <List />
+      <Footer />
     </main>
   )
 }
