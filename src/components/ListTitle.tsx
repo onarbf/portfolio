@@ -15,11 +15,6 @@ export const ListTitle = ({ content }: Props) => {
       if (lineRef.current) {
         const linePos = lineRef.current.getBoundingClientRect()
 
-        console.log({
-          year: content,
-          linePosition: linePos.y,
-          scrollPosition: screenY
-        })
         if (linePos.y < screenY - limits[0] && linePos.y > limits[1]) {
           setIsExpanded(true)
         } else {

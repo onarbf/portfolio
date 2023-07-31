@@ -38,7 +38,10 @@ export const PortfolioSlider = () => {
           <div className='flex gap-4 py-1 text-teal-400  pointer-events-auto '>
             <button
               className='p-1 rounded-full transition ease-in-out delay-50 duration-5
-            hover:bg-teal-700 outline outline-1 bg-opacity-1 bg-slate-800 md:bg-opacity-0 md:outline-0 hover:outline md:hover:outline-1 md:hover:border-teal-700 md:hover:bg-opacity-40' onClick={() => {
+              outline outline-1 bg-opacity-1 bg-slate-800 hover:bg-teal-700 focus:bg-slate-800
+            md:bg-opacity-0 md:outline-0 hover:outline
+            md:hover:outline-1 md:hover:border-teal-700
+            md:hover:bg-opacity-40' onClick={() => {
                 setIsIframeLoaded(false)
                 handlePreviousSlide()
               }}
@@ -46,7 +49,10 @@ export const PortfolioSlider = () => {
             </button>
             <button
               className='p-1 rounded-full transition ease-in-out delay-50 duration-5
-              hover:bg-teal-700 outline outline-1 bg-opacity-1 bg-slate-800 md:bg-opacity-0 md:outline-0 hover:outline md:hover:outline-1 md:hover:border-teal-700 md:hover:bg-opacity-40' onClick={() => {
+              outline outline-1 bg-opacity-1 bg-slate-800 hover:bg-teal-700 focus:bg-slate-800
+            md:bg-opacity-0 md:outline-0 hover:outline
+            md:hover:outline-1 md:hover:border-teal-700
+            md:hover:bg-opacity-40' onClick={() => {
                 setIsIframeLoaded(false)
                 handleNextSlide()
               }}

@@ -94,7 +94,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         </group>
         <Environment preset='city' />
       </Suspense>
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+      <ContactShadows position={[0, -3.6, 0]} scale={20} blur={2} far={4.5} />
     </Canvas>
   )
 }

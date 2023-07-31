@@ -30,7 +30,7 @@ export const Hero = () => {
         <div>
 
           <h1 className='text-4xl sm:text-5xl text-slate-200 font-[600] tracking-tight leading-4'>{bioData.name}</h1>
-          <h2 className='text-lg  text-slate-200 lg:leading-[0.8rem] pt-5 lg:pt-3'>{bioData.position}</h2>
+          <h2 className='text-lg  text-slate-200 leading-[0.8rem] pt-5 lg:pt-3'>{bioData.position}</h2>
           <h3 className=' font-[400] pt-3'>{bioData.tagline}</h3>
         </div>
         <div className='mt-5'>
