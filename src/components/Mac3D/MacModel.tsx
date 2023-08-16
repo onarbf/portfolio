@@ -26,7 +26,7 @@ function Model (props: any) {
           <mesh material={materials.aluminium} geometry={nodes.Cube008.geometry} />
           <mesh material={materials['matte.001']} geometry={nodes.Cube008_1.geometry} />
           <mesh geometry={nodes.Cube008_2.geometry}>
-            <Html rotation-x={-Math.PI / 2} scale={[0.28, 0.28, 0.28]} position={[0.10, 0.040, props.iframePosY]} transform occlude>
+            <Html rotation-x={-Math.PI / 2} scale={[0.28, 0.28, 0.28]} position={props.iframePos} transform occlude>
               <div className='here' onPointerDown={(e) => { e.stopPropagation() }}>
                 {!props.isIframeLoaded && <Loading />}
                 <iframe
@@ -66,7 +66,7 @@ function Model (props: any) {
 export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoading }: any) {
   const group = useRef<THREE.Group>(null!)
   const [modelPosition, setModelPosition] = useState([-2, 0, 5]) as any
-  const [iframePosY, setIframePosY] = useState(0) as any
+  const [iframePos, setIframePos] = useState([0.05, 0.04, -0.4]) as any
   const [modelFOV, setModelFOV] = useState(35)
   useEffect(() => {
     const updatePosition = () => {
@@ -74,11 +74,11 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         console.log('tamaño cambiado a peque', Math.round(window.innerWidth))
         setModelPosition([0, 1.75, 0]) // Asigna los nuevos valores para la posición
         setModelFOV(50)
-        setIframePosY(0.3)
+        setIframePos([0, 0.04, 0.35])
       } else {
         setModelPosition([-2, 0, 5]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
         setModelFOV(35)
-        setIframePosY(-0.1)
+        setIframePos([0.05, 0.04, -0.4])
       }
     }
 
@@ -86,7 +86,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
 
     window.addEventListener('resize', updatePosition)
     updatePosition()
-
+    console.log('working')
     return () => window.removeEventListener('resize', updatePosition)
   }, [])
   return (
@@ -94,7 +94,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <Suspense fallback={null}>
         <group ref={group} rotation={[0, Math.PI, 0]} position={modelPosition}>
-          <Model websiteUrl={websiteUrl} iframePosY={iframePosY} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
+          <Model websiteUrl={websiteUrl} iframePos={iframePos} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
         </group>
         <Environment preset='city' />
       </Suspense>

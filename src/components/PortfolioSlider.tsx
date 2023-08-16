@@ -33,7 +33,7 @@ export const PortfolioSlider = () => {
       <div className='relative z-0 h-full '>
         <MacModel websiteUrl={slides[slide].websiteUrl} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
       </div>
-      <div className='absolute pointer-events-none bottom-0 z-50 w-full h-full flex items-end left-[1%] md:left-[15%] xl:left-[25%]'>
+      <div className='absolute pointer-events-none bottom-0 z-50 w-full h-full flex items-end left-[1%] md:left-[5%] xl:left-[15%]'>
         <div className='w-full md:w-[45%] pb-6 px-6 md:px-0'>
           <div className='flex gap-4 py-1 text-teal-400  pointer-events-auto '>
             <button
@@ -59,7 +59,7 @@ export const PortfolioSlider = () => {
             > <VscArrowRight size={28} />
             </button>
           </div>
-          <div className='w-[290px] md:w-[80%] xl:w-[50%]'>
+          <div className='w-[100%] md:w-[80%] xl:w-[80%]'>
             <PortfolioSliderCard slide={slides[slide]} />
           </div>
         </div>
