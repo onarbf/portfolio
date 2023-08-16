@@ -74,12 +74,12 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         console.log('Desktop', window.innerWidth)
         setModelPosition([0, 0, 0])
         setModelFOV(42)
-        setIframePos([0, 0.04, -0.4])
+        setIframePos([0, 0.04, -0.09])
       } else {
         console.log('Mobile', window.innerWidth)
         setModelPosition([0, 0, 0])
         setModelFOV(60)
-        setIframePos([0, 0.04, 0.3])
+        setIframePos([0, 0.04, 0.34])
       }
     }
 
