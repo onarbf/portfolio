@@ -13,6 +13,15 @@ const PROJECTS = [
   },
   {
     id: 1,
+    websiteTitle: 'forocoches clone',
+    position: 'Frontend / Backend',
+    description:
+      'A personal project from one of the most famouse forums on the internet. Implemented an Auth System from the scratch and also a CRUD system to post and comment',
+    technologies: ['Nextjs13', 'MongoDB', 'NodeJS', 'TailwindCSS'],
+    websiteUrl: 'https://nextjs-mongodb-auth-sigma.vercel.app/'
+  },
+  {
+    id: 2,
     websiteTitle: 'G. Bueno AI',
     position: 'Frontend / Backend',
     description:

@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer'
 
 export default function App () {
   return (
+
     <main className='antialiased text-slate-400'>
       <MouseFollower />
       <Hero />
