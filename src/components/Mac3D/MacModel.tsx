@@ -17,6 +17,7 @@ function Model (props: any) {
     group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 8) / 20, 0.1)
     group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-2 + Math.sin(t / 2)) / 2, 0.1)
   })
+
   return (
     // position={[4, -5, 0]} desktop
     <group ref={group} {...props} dispose={null}>
@@ -25,12 +26,12 @@ function Model (props: any) {
           <mesh material={materials.aluminium} geometry={nodes.Cube008.geometry} />
           <mesh material={materials['matte.001']} geometry={nodes.Cube008_1.geometry} />
           <mesh geometry={nodes.Cube008_2.geometry}>
-            <Html className='content' rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} scale={[0.28, 0.28, 0.28]} transform occlude>
-              <div className='wrapper' onPointerDown={(e) => e.stopPropagation()}>
+            <Html rotation-x={-Math.PI / 2} scale={[0.28, 0.28, 0.28]} position={[0.10, 0.040, -0.40]} transform occlude>
+              <div className='here' onPointerDown={(e) => { e.stopPropagation() }}>
                 {!props.isIframeLoaded && <Loading />}
                 <iframe
                   ref={iframeRef}
-                  title='Web en el iPhone'
+                  title='Web en el MAC'
                   src={props.websiteUrl}
                   onLoad={props.handleIframeLoading}
                   style={{
@@ -48,6 +49,7 @@ function Model (props: any) {
                 />
               </div>
             </Html>
+
           </mesh>
         </group>
       </group>
@@ -68,23 +70,22 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
   useEffect(() => {
     const updatePosition = () => {
       if (window.innerWidth < 700) {
-        console.log('tamaño cambiado a peque')
+        console.log('tamaño cambiado a peque', Math.round(window.innerWidth))
         setModelPosition([0, 1.75, 0]) // Asigna los nuevos valores para la posición
         setModelFOV(50)
       } else {
-        console.log('tamaño cambiado a grande')
         setModelPosition([-2, 0, 5]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
         setModelFOV(35)
       }
     }
 
     // Ejecuta la función al montar el componente y cuando cambia el tamaño de la pantalla
-    updatePosition()
+
     window.addEventListener('resize', updatePosition)
+    updatePosition()
 
     return () => window.removeEventListener('resize', updatePosition)
   }, [])
-
   return (
     <Canvas camera={{ position: [-5, 0, -15], fov: modelFOV }}>
       <pointLight position={[10, 10, 10]} intensity={1.5} />

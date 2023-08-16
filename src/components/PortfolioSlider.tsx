@@ -29,11 +29,11 @@ export const PortfolioSlider = () => {
   }
 
   return (
-    <section id='projects' className='relative h-[700px] md:h-[600px] my-[48px] w-auto md:w-[1112px] md:mx-auto'>
+    <section id='projects' className='relative h-[700px] md:h-[600px] my-[48px] w-[100vw] md:mx-auto'>
       <div className='relative z-0 h-full '>
         <MacModel websiteUrl={slides[slide].websiteUrl} isIframeLoaded={isIframeLoaded} handleIframeLoading={handleIframeLoading} />
       </div>
-      <div className='absolute pointer-events-none bottom-0 left-0 z-50 w-full h-full flex items-end '>
+      <div className='absolute pointer-events-none bottom-0 left-0 z-50 w-full h-full flex items-end md:left-[15%] xl:left-[25%]'>
         <div className='w-full md:w-[45%] pb-6 px-6 md:px-0'>
           <div className='flex gap-4 py-1 text-teal-400  pointer-events-auto '>
             <button
@@ -59,7 +59,7 @@ export const PortfolioSlider = () => {
             > <VscArrowRight size={28} />
             </button>
           </div>
-          <div className=''>
+          <div className='md:w-[80%] xl:w-[50%]'>
             <PortfolioSliderCard slide={slides[slide]} />
           </div>
         </div>
