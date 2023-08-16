@@ -66,19 +66,20 @@ function Model (props: any) {
 export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoading }: any) {
   const group = useRef<THREE.Group>(null!)
   const [modelPosition, setModelPosition] = useState([-2, 0, 5]) as any
-  const [iframePos, setIframePos] = useState([0.05, 0.04, -0.4]) as any
+  const [iframePos, setIframePos] = useState([0, 0, 0]) as any
   const [modelFOV, setModelFOV] = useState(35)
   useEffect(() => {
     const updatePosition = () => {
       if (window.innerWidth < 700) {
-        console.log('tamaño cambiado a peque', Math.round(window.innerWidth))
+        console.log('Mobile', Math.round(window.innerWidth))
         setModelPosition([0, 1.75, 0]) // Asigna los nuevos valores para la posición
         setModelFOV(50)
         setIframePos([0, 0.04, 0.35])
       } else {
+        console.log('Desktop', Math.round(window.innerWidth))
         setModelPosition([-2, 0, 5]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
         setModelFOV(35)
-        setIframePos([0.05, 0.04, -0.4])
+        setIframePos([0.02, 0.04, -0.1])
       }
     }
 
@@ -86,7 +87,6 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
 
     window.addEventListener('resize', updatePosition)
     updatePosition()
-    console.log('working')
     return () => window.removeEventListener('resize', updatePosition)
   }, [])
   return (
