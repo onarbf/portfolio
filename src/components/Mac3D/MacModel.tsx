@@ -74,7 +74,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         console.log('Mobile', Math.round(window.innerWidth))
         setModelPosition([0, 1.75, 0]) // Asigna los nuevos valores para la posición
         setModelFOV(50)
-        setIframePos([0, 0.04, 0.35])
+        setIframePos([0, 0.04, 0])
       } else {
         console.log('Desktop', Math.round(window.innerWidth))
         setModelPosition([-2, 0, 5]) // Si el tamaño es mayor o igual a 400px, restaura los valores originales
