@@ -4,6 +4,7 @@ import { PortfolioSliderCard } from './PortfolioSliderCard'
 import { Project } from '@/types/types'
 import { VscArrowRight, VscArrowLeft } from 'react-icons/vsc'
 import PROJECTS from '@/db/projects'
+import { motion } from 'framer-motion'
 const slides: Project[] = PROJECTS
 export const PortfolioSlider = () => {
   const [slide, setSlide] = useState<number>(0)
@@ -36,7 +37,22 @@ export const PortfolioSlider = () => {
       <div className='relative md:w-[1112px]   md:mx-auto'>
         <div className='absolute pointer-events-none bottom-0 z-50 w-full h-full flex items-end'>
           <div className='w-full md:w-[45%] pb-6 px-6 md:px-0'>
-            <div className='flex gap-4 py-1 text-teal-400  pointer-events-auto '>
+            <motion.div
+              animate='show'
+              initial='hide'
+              variants={{
+                show: {
+                  opacity: 1,
+                  transition: {
+                    ease: 'easeOut',
+                    duration: 0.3
+                  }
+                },
+                hide: {
+                  opacity: 0
+                }
+              }} className='flex gap-4 py-1 text-teal-400  pointer-events-auto '
+            >
               <button
                 className='p-1 rounded-full transition ease-in-out delay-50 duration-5
               outline outline-1 bg-opacity-1 bg-slate-800 hover:bg-teal-700 focus:bg-slate-800
@@ -59,7 +75,7 @@ export const PortfolioSlider = () => {
                 }}
               > <VscArrowRight size={28} />
               </button>
-            </div>
+            </motion.div>
             <div className=''>
               <PortfolioSliderCard slide={slides[slide]} />
             </div>

@@ -12,17 +12,17 @@ export const ListCard = ({ job }: Props) => {
           className='text-white text-lg font-semibold flex gap-1 items-end'
         >{job.company} <span className='text-slate-400 font-light'>|</span><span className='text-slate-400 font-normal text-base'>{job.period}</span>
         </h1>
-        <h2 className='text-base font-[400] text-slate-200 md:text-slate-400 '>
+        <h2 className='text-[1rem] font-[400] text-slate-200 md:text-slate-400 '>
           {job.position}
 
         </h2>
-        <div className='grow  text-slate-300 font-[400] text-[0.80rem]'>
+        <div className='grow  text-slate-300 font-[400] text-[0.9rem]'>
           {job.description}
         </div>
       </div>
       <div className='flex flex-col grow'>
         <div>
-          <h4 className='text-sm text-bold text-white'>
+          <h4 className='text-base text-bold text-white'>
             Highlights
           </h4>
         </div>

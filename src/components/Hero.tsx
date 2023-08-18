@@ -18,9 +18,9 @@ export const Hero = () => {
         Currently, my goal is to specialize as a web developer, applying all the knowledge and experience I've gained over the years.
         <br /><br />
         When I'm not in front of VS Code, you can find me
-        <a className='font-[500] text-white transition hover:text-teal-300' href='https://www.prodigiosovolcan.com'>  reading a book </a>
+        <span className='font-[500] text-white transition hover:text-teal-300'>  reading a book </span>
         or playing a
-        <a className='font-[500] text-white transition hover:text-teal-300' href='https://www.prodigiosovolcan.com'> good video game</a>.
+        <span className='font-[500] text-white transition hover:text-teal-300'> good video game</span>.
       </>)
   }
   return (

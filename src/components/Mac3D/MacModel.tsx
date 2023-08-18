@@ -9,13 +9,23 @@ function Model (props: any) {
   const iframeRef = useRef(null!)
 
   const { nodes, materials } = useGLTF('/mac-draco.glb') as any
+  const rotationXFactor = 1 / 20
+  const rotationYFactor = 1 / 20
+  const rotationZFactor = 1 / 20
+  const positionYFactor = 1 / 2
   // Make it float
   useFrame((state) => {
-    const t = state.clock.getElapsedTime()
-    group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, Math.cos(t / 2) / 20 + 0.25, 0.1)
-    group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, Math.sin(t / 4) / 20, 0.1)
-    group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 8) / 20, 0.1)
-    group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-2 + Math.sin(t / 2)) / 2, 0.1)
+    const t = state.clock.getElapsedTime() / 2
+
+    const rotationX = Math.cos(t / 2) * rotationXFactor + 0.25
+    const rotationY = Math.sin(t / 4) * rotationYFactor
+    const rotationZ = Math.sin(t / 8) * rotationZFactor
+    const positionY = (-2 + Math.sin(t / 2)) * positionYFactor
+
+    group.current.rotation.x = rotationX
+    group.current.rotation.y = rotationY
+    group.current.rotation.z = rotationZ
+    group.current.position.y = positionY
   })
 
   return (
@@ -27,7 +37,9 @@ function Model (props: any) {
           <mesh material={materials['matte.001']} geometry={nodes.Cube008_1.geometry} />
           <mesh geometry={nodes.Cube008_2.geometry}>
             <Html rotation-x={-Math.PI / 2} scale={[0.28, 0.28, 0.28]} position={props.iframePos} transform occlude>
-              <div className='here' onPointerDown={(e) => { e.stopPropagation() }}>
+              {/* onPointerDown={(e) => { e.stopPropagation() }} */}
+              <div className='here'>
+
                 {!props.isIframeLoaded && <Loading />}
                 <iframe
                   ref={iframeRef}
@@ -98,7 +110,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         </group>
         <Environment preset='city' />
       </Suspense>
-      <ContactShadows position={[0, -3.6, 0]} scale={20} blur={2} far={4.5} />
+      <ContactShadows position={[0, -3.6, -1.2]} scale={20} blur={3} far={4.5} />
     </Canvas>
   )
 }

@@ -23,7 +23,7 @@ export const List = () => {
     <div className='mx-6 w-auto lg:w-[1114px] flex flex-col justify-center lg:mx-auto'>
       <div className='mb-[32px]'>
         <h2 id='experience' className='text-2xl text-white mdmt-[72px] '>Experience</h2>
-        <p className='max-w-full md:max-w-[30%] mt-2'>Here you can find all the places I've been working.<a className='text-white font-bold' href='#'> Check my resume</a> to find my full experience</p>
+        <p className='max-w-full md:max-w-[30%] mt-2'>Here you can find all the places I've been working.</p>
       </div>
       {jobSections}
     </div>

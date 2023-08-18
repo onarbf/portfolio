@@ -25,7 +25,7 @@ export const PortfolioSliderCard = ({ slide }: Props) => {
         hide: {
           opacity: 0
         }
-      }} className='pointer-events-auto bg-slate-700 bg-opacity-100 md:bg-opacity-40 p-4 rounded min-h-[250px] h-[300px] flex flex-col justify-between'
+      }} className='pointer-events-auto bg-slate-700 bg-opacity-100 md:bg-opacity-70 p-4 rounded min-h-[250px] h-[300px] flex flex-col justify-between'
     >
       <div>
         <h1
@@ -33,7 +33,7 @@ export const PortfolioSliderCard = ({ slide }: Props) => {
         >{websiteTitle}
         </h1>
         <h2 className='text-base font-[400] text-slate-200 md:text-slate-400'>{position}</h2>
-        <div className='grow  text-slate-300 font-[400] text-[0.80rem]'>
+        <div className='grow  text-white font-[400] text-[0.90rem]'>
           {description}
         </div>
         <div>
@@ -51,7 +51,7 @@ export const PortfolioSliderCard = ({ slide }: Props) => {
         </div>
       </div>
       <ul className='flex flex-wrap gap-2 pt-3'>
-        {technologies.map((technology, index) => (<li key={index} className='flex items-center rounded-full bg-teal-400/10 px-2 py-1 text-[0.6rem] font-medium leading-5 text-teal-300 '>{technology}</li>))}
+        {technologies.map((technology, index) => (<li key={index} className='flex items-center rounded-full bg-teal-400/10 px-2 py-1 text-[0.8rem] font-medium leading-5 text-teal-300 '>{technology}</li>))}
       </ul>
     </motion.div>
   )

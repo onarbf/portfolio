@@ -25,7 +25,7 @@ const JOBS: Job[] = [
   },
   {
     company: 'Schroders',
-    position: 'Salesforce & Pardot developer',
+    position: 'Salesforce & SFMC developer',
     description: (<>
       My tasks were very varied, from deploying development environments to production, to creating entire teams for specific regions, and of course, planning and developing  all the assets related to email marketing.
     </>),
