@@ -43,7 +43,7 @@ export const PortfolioSliderCard = ({ slide }: Props) => {
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
             >
-              <span>Ver proyecto</span>
+              <span>View project</span>
               <div className={`${isHover ? 'bottom-1 left-1' : 'bottom-0 left-0'} relative transition-all rotate-[-135deg]`}>
                 <VscArrowSmallDown size={20} />
               </div>
