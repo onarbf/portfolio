@@ -77,18 +77,16 @@ function Model (props: any) {
 
 export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoading }: any) {
   const group = useRef<THREE.Group>(null!)
-  const [modelPosition, setModelPosition] = useState([0, 0, 0]) as any
+  const [modelPosition, setModelPosition] = useState([-0.6, 0, 0]) as any
   const [iframePos, setIframePos] = useState([0, 0.04, -0.4]) as any
   const [modelFOV, setModelFOV] = useState(42)
   useEffect(() => {
     const updatePosition = () => {
       if (window.innerWidth > 500) {
-        console.log('Desktop', window.innerWidth)
-        setModelPosition([0, 0, 0])
+        setModelPosition([-0.6, 0, 0])
         setModelFOV(42)
         setIframePos([0, 0.04, -0.09])
       } else {
-        console.log('Mobile', window.innerWidth)
         setModelPosition([0, 0, 0])
         setModelFOV(60)
         setIframePos([0, 0.04, 0.34])
