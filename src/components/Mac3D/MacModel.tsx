@@ -89,7 +89,7 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
       } else {
         setModelPosition([0, 0, 0])
         setModelFOV(60)
-        setIframePos([0, 0.04, -0.22])
+        setIframePos([0, 0.04, 0])
       }
     }
 
