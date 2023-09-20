@@ -86,10 +86,14 @@ export default function MacModel ({ websiteUrl, isIframeLoaded, handleIframeLoad
         setModelPosition([-0.6, 0, 0])
         setModelFOV(42)
         setIframePos([0, 0.04, -0.09])
-      } else {
+      } else if (window.innerWidth > 350) {
         setModelPosition([0, 0, 0])
         setModelFOV(60)
-        setIframePos([0, 0.04, -0.20])
+        setIframePos([0, 0.04, -0.22])
+      } else {
+        setModelPosition([0, 0, 0])
+        setModelFOV(80)
+        setIframePos([0, 0.04, 0.34])
       }
     }
 
