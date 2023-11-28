@@ -44,6 +44,7 @@ function Model (props: any) {
                 <iframe
                   ref={iframeRef}
                   title='Web en el MAC'
+                  allow-same-origin
                   src={props.websiteUrl}
                   onLoad={props.handleIframeLoading}
                   style={{
