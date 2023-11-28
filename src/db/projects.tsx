@@ -23,7 +23,7 @@ const PROJECTS = [
     description:
       'This website is a showcase of a cool metatypography that allows you to make faces. It was a challenge for me to make the keyboard responsive and also develop all the logic.',
     technologies: ['Nextjs13', 'TailwindCSS'],
-    websiteUrl: 'http://happy-type-faces.vercel.app/'
+    websiteUrl: 'https://happy-type-faces.vercel.app/'
   },
   {
     id: 3,
