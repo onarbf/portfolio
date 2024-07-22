@@ -136,17 +136,15 @@ export default function MacModel({
   return (
     <Canvas camera={{ position: [-5, 0, -15], fov: modelFOV }}>
       <pointLight position={[10, 10, 10]} intensity={1.5} />
-      <Suspense fallback={null}>
-        <group rotation={[0, Math.PI, 0]} position={modelPosition}>
-          <Model
-            websiteUrl={websiteUrl}
-            iframePos={iframePos}
-            isIframeLoaded={isIframeLoaded}
-            handleIframeLoading={handleIframeLoading}
-          />
-        </group>
-        <Environment preset="city" />
-      </Suspense>
+      <group rotation={[0, Math.PI, 0]} position={modelPosition}>
+        <Model
+          websiteUrl={websiteUrl}
+          iframePos={iframePos}
+          isIframeLoaded={isIframeLoaded}
+          handleIframeLoading={handleIframeLoading}
+        />
+      </group>
+      <Environment preset="city" />
       <ContactShadows
         position={[0, -3.6, -1.2]}
         scale={20}
