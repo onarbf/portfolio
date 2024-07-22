@@ -1,29 +1,41 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
 export const Loading = () => {
-  const dotTransition = {
-    duration: 1,
-    ease: 'easeInOut',
+  const ballTransition = {
     repeat: Infinity,
-    repeatDelay: 0.2
-  }
-  const dotAnimation = { y: [0, 50, 0] }
+    ease: "linear",
+    duration: 2,
+  };
+
   return (
-    <div className='flex items-center justify-center gap-2'>
-      <motion.span
-        animate={dotAnimation}
-        transition={dotTransition}
-        className='w-[30px] h-[30px] rounded-full bg-black'
-      />
-      <motion.span
-        animate={dotAnimation}
-        transition={{ delay: 0.2, ...dotTransition }}
-        className='w-[30px] h-[30px] rounded-full bg-black'
-      />
-      <motion.span
-        animate={dotAnimation}
-        transition={{ delay: 0.4, ...dotTransition }}
-        className='w-[30px] h-[30px] rounded-full bg-black'
-      />
+    <div className="flex flex-col items-center justify-center">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={ballTransition}
+        className="w-20 h-20 mb-8 rounded-full relative"
+        style={{
+          background:
+            "conic-gradient(from 0deg, #fc8f00, #00bfff, #7cfc00, #ff00ff, #fc8f00)",
+          boxShadow:
+            "0 6px 8px rgba(0, 0, 0, 0.15), 0 3px 4px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <div
+          className="absolute inset-0 rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0) 60%)",
+          }}
+        />
+      </motion.div>
+      <p
+        className={`${inter.className} text-5xl text-sm-3xl font-bold text-black`}
+      >
+        Wait a second, you'll like it
+      </p>
     </div>
-  )
-}
+  );
+};
