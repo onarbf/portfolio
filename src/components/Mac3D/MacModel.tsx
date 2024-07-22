@@ -106,16 +106,26 @@ export default function MacModel({
   isIframeLoaded,
   handleIframeLoading,
 }: any) {
-  const [modelPosition, setModelPosition] = useState([-0.6, 0, 0]);
-  const [iframePos, setIframePos] = useState([0, 0.04, -0.4]);
+  const [modelPosition, setModelPosition] = useState(
+    new THREE.Vector3(-0.6, 0, 0)
+  );
+  const [iframePos, setIframePos] = useState(new THREE.Vector3(0, 0.04, -0.4));
   const [modelFOV, setModelFOV] = useState(42);
 
   useEffect(() => {
     const updatePosition = () => {
       const isWideScreen = window.innerWidth > 500;
-      setModelPosition(isWideScreen ? [-0.6, 0, 0] : [0, 0, 0]);
+      setModelPosition(
+        isWideScreen
+          ? new THREE.Vector3(-0.6, 0, 0)
+          : new THREE.Vector3(0, 0, 0)
+      );
       setModelFOV(isWideScreen ? 42 : 60);
-      setIframePos(isWideScreen ? [0, 0.04, -0.09] : [0, 0.04, 0]);
+      setIframePos(
+        isWideScreen
+          ? new THREE.Vector3(0, 0.04, -0.09)
+          : new THREE.Vector3(0, 0.04, 0)
+      );
     };
 
     window.addEventListener("resize", updatePosition);
