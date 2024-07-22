@@ -37,12 +37,12 @@ const PROJECTS = [
   },
   {
     id: 4,
-    websiteTitle: "G. Bueno AI",
-    position: "Frontend / Backend",
+    websiteTitle: "Procedural Minecraft World Generator",
+    position: "ThreeJS/React-three-fiber",
     description:
-      "An AI project in which, through embeddings, we gave life to Gustavo Bueno, a famous Spanish philosopher",
-    technologies: ["React", "Suppabase", "OpenAI API", "NodeJS"],
-    websiteUrl: "https://gptbueno.vercel.app/",
+      "One of my latests personal projects around ThreeJS. You can play with the UI to generate different worlds, procedurally. The challenge here was to handle the states between React and Three.",
+    technologies: ["React", "React-three-Fiber", "ThreeJS", "Typescript"],
+    websiteUrl: "https://minecraft-green.vercel.app/",
   },
 ];
 
