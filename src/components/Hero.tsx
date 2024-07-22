@@ -12,8 +12,7 @@ export const Hero = () => {
     ),
     tagline: (
       <>
-        I love to learn code while <br />I am coding in cool websites &
-        platforms
+        I love to learn code while <br />I am coding cool websites & platforms
       </>
     ),
     description: (
