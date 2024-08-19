@@ -83,7 +83,7 @@ const JOBS: Job[] = [
   },
   {
     company: "Prodigioso Volcán",
-    position: "Digital Marketing Consultant",
+    position: "MarkOps & FrontEnd Developer ",
     description: (
       <>
         I worked on Odoo and Salesforce implementation in several clients. I
