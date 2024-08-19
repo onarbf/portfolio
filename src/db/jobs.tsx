@@ -12,9 +12,9 @@ const JOBS: Job[] = [
       </>
     ),
     year: "2024",
-    period: "Dec 2024 · Actually ",
+    period: "Dec 2024 · Now ",
     highlights: [
-      "Hbuspot to Pardot (Account Engagement) Migration",
+      "Hubspot to Pardot (Account Engagement) Migration",
       "Website/Email tracking implementation for all the company",
     ],
     technologies: ["Pardot - Account Engagement", "Salesforce", "Javascript"],
@@ -36,7 +36,7 @@ const JOBS: Job[] = [
       </>
     ),
     year: "2023",
-    period: "Feb 2024 · Nov 2024 ",
+    period: "Jan 2023 · Dec 2023 ",
     highlights: [
       "Develop an AI tool to translate HTML emails automatically",
       "Manage a team of 14 developers",
@@ -44,27 +44,8 @@ const JOBS: Job[] = [
     technologies: ["", ""],
   },
   {
-    company: "Userlane",
-    position: "Marketing Operations Manager",
-    description: (
-      <>
-        I worked doing mainly dev projects related to improve Marketing
-        processes and systems. took care of the integration between Salesforce
-        and Pardot, as well as the creation of all the emails, journeys, landing
-        pages and forms.
-      </>
-    ),
-    year: "2022",
-    period: "Oct 2022 · Jan 2023",
-    highlights: [
-      "Double Opt-in email system for EMEA",
-      "Automated form enrichment based on company email through integration with ZoomInfo",
-    ],
-    technologies: ["", ""],
-  },
-  {
-    company: "Schroders",
-    position: "Salesforce & SFMC developer",
+    company: "CloudGaia · Schroders",
+    position: "Salesforce Marketing Cloud developer",
     description: (
       <>
         My tasks were very varied, from deploying development environments to
@@ -74,7 +55,7 @@ const JOBS: Job[] = [
       </>
     ),
     year: "2022",
-    period: "may. 2022 · sept. 2022",
+    period: "apr. 2022 · dec. 2022",
     highlights: [
       "Develop an internal feature to automate bulk uploads of leads to Pardot",
     ],
@@ -82,16 +63,18 @@ const JOBS: Job[] = [
   },
   {
     company: "MSD",
-    position: "SFMC Developer",
+    position: "SFMC & FrontEnd Developer",
     description: (
       <>
-        Using AMPScript, my work was to develop all the email templates, as well
-        as some specific landing pages. On the other hand, I had to work on the
-        database management for the target segmentation, with SQL.
+        <ul>
+          <li>React front-end of landing pages developer</li>
+          <li>Journey implementation & automation process developer</li>
+          <li>Javascript Excel-Salesforce integration development</li>
+        </ul>
       </>
     ),
     year: "2021",
-    period: "jul 2021 · may 2022",
+    period: "jun 2021 · may 2022",
     highlights: [
       "Automated the creation of emails through excel and ScriptLab",
       "Script to sort differently the content on each email  to each user, based on their interest",

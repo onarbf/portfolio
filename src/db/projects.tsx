@@ -10,24 +10,6 @@ const PROJECTS = [
   },
   {
     id: 1,
-    websiteTitle: "Mayeutica.io",
-    position: "Frontend / Backend",
-    description:
-      "This is a digital newspaper where every day, topics, news and images are generated automatically by AI",
-    technologies: ["nextJS", "JavaScript", "React", "NodeJS"],
-    websiteUrl: "https://www.mayeutica.io",
-  },
-  {
-    id: 2,
-    websiteTitle: "Eustory",
-    position: "Frontend / Backend",
-    description:
-      "The main website of Eustory Iberia, a big institution focused on promote the interest in history to young european citizens",
-    technologies: ["Wordpress", "PHP", "HTML/CSS", "Javascript"],
-    websiteUrl: "https://eustory.es/",
-  },
-  {
-    id: 3,
     websiteTitle: "Happy Type Faces",
     position: "Frontend / Backend",
     description:
@@ -36,13 +18,40 @@ const PROJECTS = [
     websiteUrl: "https://www.happytypeface.com/",
   },
   {
-    id: 4,
+    id: 2,
     websiteTitle: "Procedural Minecraft World Generator",
     position: "ThreeJS/React-three-fiber",
     description:
       "One of my latests personal projects around ThreeJS. You can play with the UI to generate different worlds, procedurally. The challenge here was to handle the states between React and Three.",
     technologies: ["React", "React-three-Fiber", "ThreeJS", "Typescript"],
     websiteUrl: "https://minecraft-green.vercel.app/",
+  },
+  {
+    id: 3,
+    websiteTitle: "Eustory",
+    position: "Frontend / Backend",
+    description:
+      "The main website of Eustory Iberia, a big institution focused on promote the interest in history to young european citizens. I developed both the website and the platform",
+    technologies: ["Wordpress", "PHP", "HTML/CSS", "Javascript"],
+    websiteUrl: "https://eustory.es/",
+  },
+  {
+    id: 4,
+    websiteTitle: "Noit-me",
+    position: "Frontend / Backend",
+    description:
+      "A project for an entrepreneur who wanted a Proof of Concept to show to different investors. It is an app to find people by phone who is also in the platform. ",
+    technologies: ["React", "Typescript", "TailwindCSS", "NodeJS", "NextJS"],
+    websiteUrl: "https://noti-me.com/",
+  },
+  {
+    id: 5,
+    websiteTitle: "Mayeutica.io",
+    position: "Frontend / Backend",
+    description:
+      "This is a digital newspaper where every day, topics, news and images are generated automatically by AI",
+    technologies: ["nextJS", "JavaScript", "React", "NodeJS"],
+    websiteUrl: "https://www.mayeutica.io",
   },
 ];
 
