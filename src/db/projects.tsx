@@ -1,6 +1,15 @@
 const PROJECTS = [
   {
     id: 0,
+    websiteTitle: "AlinaKobus.com",
+    position: "Frontend / Backend",
+    description:
+      "A beautiful portfolio for an amazing Designer. The web is filled with a lof of funny and smooth interaciotns.",
+    technologies: ["NextJS", "Sanity", "NodeJS", "TailwindCSS"],
+    websiteUrl: "https://alina-ebon.vercel.app/",
+  },
+  {
+    id: 1,
     websiteTitle: "Sarabastai.com",
     position: "Frontend / Backend",
     description:
@@ -9,7 +18,7 @@ const PROJECTS = [
     websiteUrl: "https://www.sarabastai.com",
   },
   {
-    id: 1,
+    id: 2,
     websiteTitle: "Happy Type Faces",
     position: "Frontend / Backend",
     description:
@@ -18,7 +27,7 @@ const PROJECTS = [
     websiteUrl: "https://www.happytypeface.com/",
   },
   {
-    id: 2,
+    id: 3,
     websiteTitle: "Procedural Minecraft World Generator",
     position: "ThreeJS/React-three-fiber",
     description:
@@ -27,7 +36,7 @@ const PROJECTS = [
     websiteUrl: "https://minecraft-green.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     websiteTitle: "Eustory",
     position: "Frontend / Backend",
     description:
@@ -36,7 +45,7 @@ const PROJECTS = [
     websiteUrl: "https://eustory.es/",
   },
   {
-    id: 4,
+    id: 5,
     websiteTitle: "Noit-me",
     position: "Frontend / Backend",
     description:
@@ -45,7 +54,7 @@ const PROJECTS = [
     websiteUrl: "https://noti-me.com/",
   },
   {
-    id: 5,
+    id: 6,
     websiteTitle: "Mayeutica.io",
     position: "Frontend / Backend",
     description:

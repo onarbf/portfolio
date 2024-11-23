@@ -19,7 +19,7 @@ const Model = React.memo(function Model(props: any) {
   );
 
   useFrame((state) => {
-    const t = state.clock.getElapsedTime() / 2;
+    const t = state.clock.getElapsedTime() / 4;
     const {
       rotationXFactor,
       rotationYFactor,
