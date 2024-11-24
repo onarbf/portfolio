@@ -11,6 +11,7 @@ export const PortfolioSlider = () => {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
 
   const handleIframeLoading = () => {
+    console.log("IFRAME LOADED");
     setIsIframeLoaded(true);
   };
   const handleNextSlide = () => {
