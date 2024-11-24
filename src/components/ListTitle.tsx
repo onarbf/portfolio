@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Props {
   content: string;
+  isActive: boolean;
+  onActivate: () => void;
 }
-export const ListTitle = ({ content }: Props) => {
+
+export const ListTitle = ({ content, isActive, onActivate }: Props) => {
   const lineRef = useRef(null!) as any;
-  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const screenY = window.innerHeight;
-      const limits = screenY > 600 ? [150, 200] : [200, 100];
+      const limits = screenY > 600 ? [500, 200] : [300, 100];
       if (lineRef.current) {
         const linePos = lineRef.current.getBoundingClientRect();
 
         if (linePos.y < screenY - limits[0] && linePos.y > limits[1]) {
-          setIsExpanded(true);
-        } else {
-          setIsExpanded(false);
+          onActivate();
         }
       }
     };
@@ -26,7 +26,8 @@ export const ListTitle = ({ content }: Props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [onActivate]);
+
   const variants = {
     normal: {
       width: "12px",
@@ -35,10 +36,11 @@ export const ListTitle = ({ content }: Props) => {
       width: "48px",
     },
   };
+
   return (
     <div className="flex items-center gap-1 mt-4">
       <motion.div
-        animate={isExpanded ? "expanded" : "normal"}
+        animate={isActive ? "expanded" : "normal"}
         variants={variants}
         ref={lineRef}
         className="h-[1px] bg-white"
