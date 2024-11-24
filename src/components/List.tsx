@@ -7,7 +7,7 @@ export const List = () => {
   const jobs = JOBS;
   const years = jobs.map(({ year }) => year);
   const uniqueYears = [...new Set(years)];
-  const [activeYear, setActiveYear] = useState<number | null>(null);
+  const [activeYear, setActiveYear] = useState<string | null>(null);
 
   const jobSections = uniqueYears.map((year) => {
     const jobsPerYear = jobs.filter((job) => job.year === year);

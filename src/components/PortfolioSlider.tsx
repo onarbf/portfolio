@@ -11,7 +11,6 @@ export const PortfolioSlider = () => {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
 
   const handleIframeLoading = () => {
-    console.log("IFRAME LOADED");
     setIsIframeLoaded(true);
   };
   const handleNextSlide = () => {
@@ -36,7 +35,6 @@ export const PortfolioSlider = () => {
       className="relative h-[900px] md:h-[800px] my-[48px] w-full"
     >
       <div className="relative h-full ml-[0px] z-0 w-full md:w-auto md:ml-[400px] ">
-        <div>YEYU</div>
         <MacModel
           websiteUrl={slides[slide].websiteUrl}
           isIframeLoaded={isIframeLoaded}
