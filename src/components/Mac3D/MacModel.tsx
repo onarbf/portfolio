@@ -46,6 +46,7 @@ const Model = React.memo(function Model(props: any) {
             geometry={nodes.Cube008_1.geometry}
           />
           <mesh geometry={nodes.Cube008_2.geometry}>
+            <meshStandardMaterial color="black" />
             <Html
               rotation-x={-Math.PI / 2}
               scale={[0.28, 0.28, 0.28]}
@@ -123,7 +124,7 @@ export default function MacModel({
       setModelFOV(isWideScreen ? 42 : 60);
       setIframePos(
         isWideScreen
-          ? new THREE.Vector3(0, 0.04, -0.09)
+          ? new THREE.Vector3(0, 0.04, 0.26)
           : new THREE.Vector3(0, 0.04, 0)
       );
     };
@@ -144,13 +145,13 @@ export default function MacModel({
           handleIframeLoading={handleIframeLoading}
         />
       </group>
-      <Environment preset="city" />
-      <ContactShadows
+      {/* <Environment preset="city" /> */}
+      {/* <ContactShadows
         position={[0, -3.6, -1.2]}
         scale={20}
         blur={3}
         far={4.5}
-      />
+      /> */}
     </Canvas>
   );
 }
