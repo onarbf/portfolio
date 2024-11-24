@@ -32,7 +32,7 @@ export const Loading = () => {
         />
       </motion.div>
       <p
-        className={`${inter.className} text-5xl text-sm-3xl font-bold text-black text-center`}
+        className={`${inter.className} text-5xl text-sm-3xl font-bold text-white text-center`}
       >
         Wait a second, you'll like it
       </p>

@@ -46,7 +46,7 @@ const PROJECTS = [
   },
   {
     id: 5,
-    websiteTitle: "Noit-me",
+    websiteTitle: "Noti-me",
     position: "Frontend / Backend",
     description:
       "A project for an entrepreneur who wanted a Proof of Concept to show to different investors. It is an app to find people by phone who is also in the platform. ",
