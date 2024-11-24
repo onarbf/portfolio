@@ -11,6 +11,7 @@ export default function App() {
     <main className="antialiased text-slate-400">
       <MouseFollower />
       <Hero />
+
       <PortfolioSlider />
       <List />
       <Footer />
