@@ -46,35 +46,36 @@ const Model = React.memo(function Model(props: any) {
             geometry={nodes.Cube008_1.geometry}
           />
           <mesh geometry={nodes.Cube008_2.geometry}>
-            <meshStandardMaterial color="black" />
-            <Html
-              rotation-x={-Math.PI / 2}
-              scale={[0.28, 0.28, 0.28]}
-              position={props.iframePos}
-              transform
-              occlude
-            >
-              <div className="here">
-                {!props.isIframeLoaded && <Loading />}
-                <iframe
-                  title="Web en el MAC"
-                  src={props.websiteUrl}
-                  onLoad={props.handleIframeLoading}
-                  style={{
-                    visibility: props.isIframeLoaded ? "visible" : "hidden",
-                    display: props.isIframeLoaded ? "block" : "none",
-                    width: "1200px",
-                    height: "768px",
-                    backgroundColor: "white",
-                    WebkitUserSelect: "none",
-                    WebkitTouchCallout: "none",
-                    MozUserSelect: "none",
-                    userSelect: "none",
-                    color: "#cc0000",
-                  }}
-                />
-              </div>
-            </Html>
+            <meshBasicMaterial color="black" />
+            <Suspense fallback={<Loading />}>
+              <Html
+                rotation-x={-Math.PI / 2}
+                scale={[0.28, 0.28, 0.28]}
+                position={props.iframePos}
+                transform
+              >
+                <div className="here">
+                  {!props.isIframeLoaded && <Loading />}
+                  <iframe
+                    title="Web en el MAC"
+                    src={props.websiteUrl}
+                    onLoad={props.handleIframeLoading}
+                    style={{
+                      visibility: props.isIframeLoaded ? "visible" : "hidden",
+                      display: props.isIframeLoaded ? "block" : "none",
+                      width: "1200px",
+                      height: "768px",
+                      backgroundColor: "white",
+                      WebkitUserSelect: "none",
+                      WebkitTouchCallout: "none",
+                      MozUserSelect: "none",
+                      userSelect: "none",
+                      color: "#cc0000",
+                    }}
+                  />
+                </div>
+              </Html>
+            </Suspense>
           </mesh>
         </group>
       </group>
@@ -124,7 +125,7 @@ export default function MacModel({
       setModelFOV(isWideScreen ? 42 : 60);
       setIframePos(
         isWideScreen
-          ? new THREE.Vector3(0, 0.04, 0.26)
+          ? new THREE.Vector3(0, 0.04, -0.09)
           : new THREE.Vector3(0, 0.04, 0)
       );
     };
@@ -145,13 +146,13 @@ export default function MacModel({
           handleIframeLoading={handleIframeLoading}
         />
       </group>
-      {/* <Environment preset="city" /> */}
-      {/* <ContactShadows
+      <Environment preset="city" />
+      <ContactShadows
         position={[0, -3.6, -1.2]}
         scale={20}
         blur={3}
         far={4.5}
-      /> */}
+      />
     </Canvas>
   );
 }
