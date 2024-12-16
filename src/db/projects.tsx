@@ -53,15 +53,6 @@ const PROJECTS = [
     technologies: ["React", "Typescript", "TailwindCSS", "NodeJS", "NextJS"],
     websiteUrl: "https://noti-me.com/",
   },
-  {
-    id: 6,
-    websiteTitle: "Mayeutica.io",
-    position: "Frontend / Backend",
-    description:
-      "This is a digital newspaper where every day, topics, news and images are generated automatically by AI",
-    technologies: ["nextJS", "JavaScript", "React", "NodeJS"],
-    websiteUrl: "https://www.mayeutica.io",
-  },
 ];
 
 export default PROJECTS;
