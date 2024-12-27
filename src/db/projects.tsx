@@ -5,11 +5,20 @@ const PROJECTS = [
     position: "Frontend / Backend",
     description:
       "A beautiful portfolio for an amazing Designer. The web is filled with a lof of funny and smooth interaciotns.",
-    technologies: ["NextJS", "Sanity", "NodeJS", "TailwindCSS"],
+    technologies: ["NextJS", "Sanity", "Typescript", "TailwindCSS"],
     websiteUrl: "https://alina-ebon.vercel.app/",
   },
   {
     id: 1,
+    websiteTitle: "Elartificial.com",
+    position: "Frontend / Backend",
+    description:
+      "A fully-automated newspaper made with AI. All news are auto-written and auto-published. It surprised me with more than 5k visits per day and around 300 daily news.",
+    technologies: ["NextJS", "PayloadCMS", "Typescript", "TailwindCSS"],
+    websiteUrl: "https://www.elartificial.com",
+  },
+  {
+    id: 2,
     websiteTitle: "Sarabastai.com",
     position: "Frontend / Backend",
     description:
@@ -18,7 +27,7 @@ const PROJECTS = [
     websiteUrl: "https://www.sarabastai.com",
   },
   {
-    id: 2,
+    id: 3,
     websiteTitle: "Happy Type Faces",
     position: "Frontend / Backend",
     description:
@@ -27,7 +36,7 @@ const PROJECTS = [
     websiteUrl: "https://www.happytypeface.com/",
   },
   {
-    id: 3,
+    id: 4,
     websiteTitle: "Procedural Minecraft World Generator",
     position: "ThreeJS/React-three-fiber",
     description:
@@ -36,7 +45,7 @@ const PROJECTS = [
     websiteUrl: "https://minecraft-green.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     websiteTitle: "Eustory",
     position: "Frontend / Backend",
     description:
@@ -45,7 +54,7 @@ const PROJECTS = [
     websiteUrl: "https://eustory.es/",
   },
   {
-    id: 5,
+    id: 6,
     websiteTitle: "Noti-me",
     position: "Frontend / Backend",
     description:
