@@ -13,7 +13,7 @@ export default function App() {
       <Hero />
 
       <PortfolioSlider />
-      <List />
+      {/* <List /> */}
       <Footer />
     </main>
   );

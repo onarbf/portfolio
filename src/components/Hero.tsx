@@ -37,13 +37,10 @@ export const Hero = () => {
           Back-end
         </span>{" "}
         for a university, a
-        <a
-          className="font-[500] text-white transition hover:text-teal-300"
-          href="https://www.prodigiosovolcan.com"
-        >
+        <span className="font-[500] text-white transition hover:text-teal-300">
           {" "}
           marketing agency
-        </a>
+        </span>
         , a major pharmaceutical company, a promising startup, a big anti-virus
         corporation, and currently, at RatedPower.
         <br />
@@ -60,9 +57,8 @@ export const Hero = () => {
         or playing a
         <span className="font-[500] text-white transition hover:text-teal-300">
           {" "}
-          good video game{" "}
+          good video game
         </span>
-        (Elden Ring DLC curretnly) .
       </>
     ),
   };
